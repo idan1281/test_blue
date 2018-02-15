@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        echo 'Building'
+        echo 'Building $text'
       }
     }
     stage('Test') {
@@ -11,5 +11,8 @@ pipeline {
         echo 'Testing'
       }
     }
+  }
+  environment {
+    text = 'this is the text'
   }
 }
